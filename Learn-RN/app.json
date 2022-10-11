@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Learn-RN",
+    "slug": "Learn-RN",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
