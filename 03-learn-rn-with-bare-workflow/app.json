@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "03-learn-rn-with-bare-workflow",
+    "slug": "03-learn-rn-with-bare-workflow",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
