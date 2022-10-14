@@ -15,11 +15,7 @@ export default function telegram() {
   return (
     <>
       <SafeAreaView style={styles.container}>
-        <StatusBar
-          animated={true}
-          backgroundColor="#517DA2"
-          barStyle="light-content"
-        />
+        <StatusBar backgroundColor="#517DA2" barStyle="light-content" />
         {/* Header */}
         <View style={styles.header}>
           <View style={styles.subContentDrawer}>
@@ -43,12 +39,25 @@ export default function telegram() {
               return (
                 <>
                   <TouchableOpacity style={styles.messagesContainer}>
-                    <Image style={styles.avatarMessage} source={item.image} />
-                    <View style={styles.message}>
-                      <Text>{item.name}</Text>
-                      <Text>{item.message}</Text>
+                    <View style={{ flexDirection: "row" }}>
+                      <Image style={styles.avatarMessage} source={item.image} />
+                      <View style={styles.message}>
+                        <Text>{item.name}</Text>
+                        <Text>{item.message}</Text>
+                      </View>
+                    </View>
+                    <View>
+                      <Image source={require("./asset/check.png")} />
+                      <Text>{item.time}</Text>
+                      <Text>{item.totalMessage}</Text>
                     </View>
                   </TouchableOpacity>
+                  <View
+                    style={{
+                      borderBottomWidth: 1,
+                      borderBottomColor: "#A8AAAB",
+                    }}
+                  />
                 </>
               );
             }}
@@ -88,6 +97,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingHorizontal: 15,
     paddingVertical: 10,
+    justifyContent: "space-between",
   },
   avatarMessage: {
     height: 60,
